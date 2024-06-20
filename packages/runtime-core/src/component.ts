@@ -1112,7 +1112,7 @@ export function createSetupContext(
 
 export function getComponentPublicInstance(
   instance: ComponentInternalInstance,
-): Record<string, any> | undefined {
+): Record<string, any> | ComponentPublicInstance | null {
   if (instance.exposed) {
     return (
       instance.exposeProxy ||

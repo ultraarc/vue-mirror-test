@@ -2555,7 +2555,7 @@ function locateNonHydratedAsyncRoot(
   }
 }
 
-export function invalidateMount(hooks: LifecycleHook) {
+export function invalidateMount(hooks: LifecycleHook): void {
   if (hooks) {
     for (let i = 0; i < hooks.length; i++) hooks[i].active = false
   }
