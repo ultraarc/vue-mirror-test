@@ -38,7 +38,9 @@ export class ComputedRefImpl<T> {
   public readonly effect: ReactiveEffect<T>
 
   public readonly __v_isRef = true
-  public readonly [ReactiveFlags.IS_READONLY]: boolean = false
+  // TODO isolatedDeclarations
+  // public readonly [ReactiveFlags.IS_READONLY]: boolean = false
+  public readonly __v_isReadonly: boolean = false
 
   public _cacheable: boolean
 
